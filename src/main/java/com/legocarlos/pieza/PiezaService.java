@@ -1,25 +1,24 @@
 package com.legocarlos.pieza;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class piezaService {
-    private final piezaRepository piezaRepository;
+public class PiezaService {
+    private final PiezaRepository piezaRepository;
 
-    public List<pieza> getAllpieza() {
+    public List<Pieza> getAllpieza() {
         return piezaRepository.findAll();
     }
 
-    public pieza getpiezaById(Long id) {
+    public Pieza getpiezaById(Long id) {
         return piezaRepository.findById(id).orElse(null);
     }
 
-    public pieza savepieza(pieza pieza) {
+    public Pieza savepieza(Pieza pieza) {
         return piezaRepository.save(pieza);
     }
 

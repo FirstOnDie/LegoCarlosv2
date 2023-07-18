@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "legocarlos")
-public class pieza {
+public class Pieza {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
