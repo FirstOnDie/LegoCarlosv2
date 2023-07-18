@@ -38,8 +38,8 @@ public class PiezaController {
         piezaService.deletepieza(id);
     }
 
-    /*@GetMapping("/search")
-    public List<pieza> searchpieza(@RequestParam String keyword) {
+    @GetMapping("/search")
+    public List<Pieza> searchpieza(@RequestParam String keyword) {
         return piezaService.searchpieza(keyword);
-    }*/
+    }
 }

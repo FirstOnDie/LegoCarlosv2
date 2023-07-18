@@ -26,7 +26,7 @@ public class PiezaService {
         piezaRepository.deleteById(id);
     }
 
-    /*public List<pieza> searchpieza(String keyword) {
+    public List<Pieza> searchpieza(String keyword) {
         return piezaRepository.findByReferenciaContainsOrNombreContains(keyword, keyword);
-    }*/
+    }
 }

@@ -1,14 +1,9 @@
 package com.legocarlos.pieza;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.Data;
 
-import javax.persistence.*;
-
-@Setter
-@Getter
-@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "legocarlos")
 public class Pieza {
