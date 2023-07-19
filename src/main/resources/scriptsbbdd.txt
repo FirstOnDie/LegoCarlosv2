@@ -1,0 +1,16 @@
+INSERT INTO cajas (nombre)
+SELECT DISTINCT caja
+FROM legocarlos;
+
+UPDATE legocarlos AS l
+JOIN cajas AS c ON l.caja = c.nombre
+SET l.caja = c.id;
+
+ALTER TABLE `legocarlos`
+	CHANGE COLUMN `caja` `caja` INT NOT NULL DEFAULT 0 COLLATE 'utf8mb3_unicode_ci' AFTER `unidades`;
+
+---INSERTAR LOS COLORES---
+
+UPDATE legocarlos AS l
+JOIN colores AS c ON l.nombre LIKE CONCAT("%",c.nombre)
+SET l.color = c.id;

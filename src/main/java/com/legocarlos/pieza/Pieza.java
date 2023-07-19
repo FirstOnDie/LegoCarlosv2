@@ -1,5 +1,7 @@
 package com.legocarlos.pieza;
 
+import com.legocarlos.caja.Caja;
+import com.legocarlos.color.Color;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,7 +15,12 @@ public class Pieza {
     private String referencia;
     private String nombre;
     private String foto;
+    @ManyToOne
+    @JoinColumn(name="nombre")
+    private Color color;
     private Integer unidades;
-    private String caja;
+    @ManyToOne
+    @JoinColumn(name="caja")
+    private Caja caja;
 
 }
